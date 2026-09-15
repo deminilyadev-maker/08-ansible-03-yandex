@@ -1,9 +1,20 @@
----
 clickhouse:
   hosts:
-    centos:
-      ansible_connection: docker
+    clickhouse-1:
+      ansible_host: 158.160.191.195
+      ansible_user: idemin
+      ansible_ssh_private_key_file: /home/ilya/ssh-key-1789408953122/ssh-key-1789408953122
+
+lighthouse:
+  hosts:
+    lighthouse-1:
+      ansible_host: 158.160.228.187
+      ansible_user: idemin
+      ansible_ssh_private_key_file: /home/ilya/ssh-key-1789408953122/ssh-key-1789408953122
+
 vector:
   hosts:
-    centos:
-      ansible_connection: docker
+    vector-1:
+      ansible_host: 158.160.197.194
+      ansible_user: idemin
+      ansible_ssh_private_key_file: /home/ilya/ssh-key-1789408953122/ssh-key-1789408953122
