@@ -145,7 +145,7 @@ vector
 
 ```yaml
 ansible_user: idemin
-ansible_ssh_private_key_file: /home/ilya/ssh-key-1789408953122/ssh-key-1789408953122
+ansible_ssh_private_key_file: /home/ilya/ssh$$$
 ```
 
 Запуск playbook:
@@ -166,14 +166,6 @@ ansible-playbook -i inventory/prod.yml site.yml
 -i inventory/prod.yml
 ```
 
-Для проверки playbook использовались стандартные параметры Ansible:
-
-```bash
---check
---diff
-```
-
----
 
 ## Проверка ansible-lint
 
@@ -196,26 +188,3 @@ ansible-lint site.yml
 ![Проверка Lighthouse](screenshots/Lighthouse_check.png)
 
 ---
-
-## Структура проекта
-
-```text
-08-ansible-03-yandex/
-├── group_vars/
-│   ├── clickhouse.yml
-│   ├── lighthouse.yml
-│   └── vector.yml
-├── inventory/
-│   └── prod.yml
-├── templates/
-│   ├── lighthouse.conf.j2
-│   ├── nginx.conf.j2
-│   ├── vector.service.j2
-│   └── vector.yml.j2
-├── screenshots/
-│   ├── Lighthouse_check.png
-│   ├── lint_check.png
-│   └── .gitkeep
-├── site.yml
-└── README.md
-```
